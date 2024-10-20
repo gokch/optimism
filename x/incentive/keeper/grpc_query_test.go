@@ -4,10 +4,10 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 	"github.com/stretchr/testify/require"
 )
 

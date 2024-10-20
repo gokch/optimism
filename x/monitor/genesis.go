@@ -2,8 +2,9 @@ package monitor
 
 import (
 	"context"
-	"github.com/babylonlabs-io/babylon/x/monitor/keeper"
-	"github.com/babylonlabs-io/babylon/x/monitor/types"
+
+	"github.com/ethereum-optimism/optimism/x/monitor/keeper"
+	"github.com/ethereum-optimism/optimism/x/monitor/types"
 )
 
 // InitGenesis initializes the capability module's state from a provided genesis

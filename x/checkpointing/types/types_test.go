@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 // a single validator

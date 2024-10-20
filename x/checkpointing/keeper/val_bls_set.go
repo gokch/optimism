@@ -2,11 +2,12 @@ package keeper
 
 import (
 	"context"
-	"cosmossdk.io/store/prefix"
 	"fmt"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+
+	"cosmossdk.io/store/prefix"
 	"github.com/cosmos/cosmos-sdk/runtime"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 // GetValidatorBlsKeySet returns the set of validators of a given epoch with BLS public key

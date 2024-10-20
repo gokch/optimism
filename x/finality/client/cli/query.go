@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/spf13/cobra"
 
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 const (

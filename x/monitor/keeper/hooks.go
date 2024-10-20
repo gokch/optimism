@@ -3,9 +3,9 @@ package keeper
 import (
 	"context"
 
-	checkpointingtypes "github.com/babylonlabs-io/babylon/x/checkpointing/types"
-	etypes "github.com/babylonlabs-io/babylon/x/epoching/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	checkpointingtypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	etypes "github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 // HandledHooks Helper interface to be sure Hooks implement both epoching and light client hooks

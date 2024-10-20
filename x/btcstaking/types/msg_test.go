@@ -6,11 +6,11 @@ import (
 	"testing"
 
 	"cosmossdk.io/errors"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	bbntypes "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 	stktypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 	"github.com/stretchr/testify/require"
 )
 

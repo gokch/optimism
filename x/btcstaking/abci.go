@@ -4,10 +4,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/babylonlabs-io/babylon/x/btcstaking/keeper"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cosmos/cosmos-sdk/telemetry"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/keeper"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 func BeginBlocker(ctx context.Context, k keeper.Keeper) error {

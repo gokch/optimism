@@ -29,8 +29,8 @@ import (
 	"github.com/babylonlabs-io/babylon/app"
 	"github.com/babylonlabs-io/babylon/app/params"
 	"github.com/babylonlabs-io/babylon/privval"
-	testutilcli "github.com/babylonlabs-io/babylon/testutil/cli"
-	checkpointcli "github.com/babylonlabs-io/babylon/x/checkpointing/client/cli"
+	testutilcli "github.com/ethereum-optimism/optimism/x/testutil/cli"
+	checkpointcli "github.com/ethereum-optimism/optimism/x/checkpointing/client/cli"
 )
 
 type mockCometRPC struct {

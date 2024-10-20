@@ -6,9 +6,9 @@ import (
 	"math"
 	"math/big"
 
-	txformat "github.com/babylonlabs-io/babylon/btctxformatter"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
+	txformat "github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 var (

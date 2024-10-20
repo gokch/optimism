@@ -3,10 +3,10 @@ package keeper_test
 import (
 	"testing"
 
-	keepertest "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/keeper"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/protobuf/reflect/protoreflect"

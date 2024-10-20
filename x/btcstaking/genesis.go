@@ -3,8 +3,8 @@ package btcstaking
 import (
 	"context"
 
-	"github.com/babylonlabs-io/babylon/x/btcstaking/keeper"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/keeper"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

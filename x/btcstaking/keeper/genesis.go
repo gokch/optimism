@@ -7,8 +7,8 @@ import (
 
 	btcstk "github.com/babylonlabs-io/babylon/btcstaking"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

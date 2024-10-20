@@ -8,8 +8,8 @@ import (
 
 	"cosmossdk.io/store/prefix"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 // IterateActiveFPs iterates over all finality providers that are not slashed

@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/babylonlabs-io/babylon/types"
-	finalitytypes "github.com/babylonlabs-io/babylon/x/finality/types"
+	finalitytypes "github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 // HandleLiveness handles liveness of each active finality provider for a given height

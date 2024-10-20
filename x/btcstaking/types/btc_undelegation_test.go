@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/require"
 
 	asig "github.com/babylonlabs-io/babylon/crypto/schnorr-adaptor-signature"
-	btctest "github.com/babylonlabs-io/babylon/testutil/bitcoin"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	btctest "github.com/ethereum-optimism/optimism/x/testutil/bitcoin"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 )
 
 func FuzzBTCUndelegation_SlashingTx(f *testing.F) {

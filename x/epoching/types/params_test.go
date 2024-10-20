@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
 	"github.com/stretchr/testify/require"
 )
 

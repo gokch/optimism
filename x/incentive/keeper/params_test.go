@@ -3,8 +3,8 @@ package keeper_test
 import (
 	"testing"
 
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 	"github.com/stretchr/testify/require"
 )
 

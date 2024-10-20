@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 )
 
 func TestGetParams(t *testing.T) {

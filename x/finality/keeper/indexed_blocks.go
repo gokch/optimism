@@ -4,9 +4,9 @@ import (
 	"context"
 
 	"cosmossdk.io/store/prefix"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
 	"github.com/cosmos/cosmos-sdk/runtime"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 // IndexBlock indexes the current block, saves the corresponding indexed block

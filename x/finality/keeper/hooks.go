@@ -8,7 +8,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	bbntypes "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 var _ types.BtcStakingHooks = Hooks{}

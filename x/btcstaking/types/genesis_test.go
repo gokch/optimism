@@ -5,7 +5,7 @@ import (
 
 	sdkmath "cosmossdk.io/math"
 
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,9 +5,9 @@ import (
 
 	"cosmossdk.io/store/prefix"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
 	"github.com/cosmos/cosmos-sdk/runtime"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 func (k Keeper) SetEvidence(ctx context.Context, evidence *types.Evidence) {

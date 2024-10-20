@@ -7,18 +7,18 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/babylonlabs-io/babylon/x/checkpointing/keeper"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/keeper"
 
 	"github.com/golang/mock/gomock"
 
-	"github.com/babylonlabs-io/babylon/testutil/mocks"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
-	epochingtypes "github.com/babylonlabs-io/babylon/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	epochingtypes "github.com/ethereum-optimism/optimism/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/mocks"
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 )
 
 func FuzzQueryEpoch(f *testing.F) {

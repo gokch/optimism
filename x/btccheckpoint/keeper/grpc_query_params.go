@@ -3,8 +3,8 @@ package keeper
 import (
 	"context"
 
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

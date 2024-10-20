@@ -13,9 +13,9 @@ import (
 	bbn "github.com/babylonlabs-io/babylon/types"
 
 	asig "github.com/babylonlabs-io/babylon/crypto/schnorr-adaptor-signature"
-	btctest "github.com/babylonlabs-io/babylon/testutil/bitcoin"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	btctest "github.com/ethereum-optimism/optimism/x/testutil/bitcoin"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 func FuzzBTCDelegation(f *testing.F) {

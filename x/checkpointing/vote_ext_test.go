@@ -7,9 +7,9 @@ import (
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testhelper "github.com/babylonlabs-io/babylon/testutil/helper"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testhelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 // FuzzAddBLSSigVoteExtension_MultipleVals tests adding BLS signatures via VoteExtension

@@ -2,7 +2,8 @@ package keeper
 
 import (
 	"context"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 // rewardBTCTimestamping finds the (submitter, reporter) pairs of all submissions at the

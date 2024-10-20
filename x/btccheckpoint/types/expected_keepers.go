@@ -3,9 +3,9 @@ package types
 import (
 	"context"
 
-	txformat "github.com/babylonlabs-io/babylon/btctxformatter"
 	bbn "github.com/babylonlabs-io/babylon/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	txformat "github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 type BTCLightClientKeeper interface {

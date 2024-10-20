@@ -9,7 +9,7 @@ import (
 	"github.com/bits-and-blooms/bitset"
 
 	bbntypes "github.com/babylonlabs-io/babylon/types"
-	finalitytypes "github.com/babylonlabs-io/babylon/x/finality/types"
+	finalitytypes "github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 // GetMissedBlockBitmapValue returns true if a finality provider missed signing

@@ -16,10 +16,10 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/babylonlabs-io/babylon/btcstaking"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	btcckpttypes "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	btcckpttypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 // testStakingParams generates valid staking parameters with randomized

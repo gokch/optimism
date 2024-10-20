@@ -12,7 +12,7 @@ import (
 	"google.golang.org/grpc/status"
 
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 var _ types.QueryServer = Keeper{}

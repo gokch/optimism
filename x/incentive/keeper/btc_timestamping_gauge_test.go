@@ -5,10 +5,10 @@ import (
 	"testing"
 
 	"cosmossdk.io/math"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 )

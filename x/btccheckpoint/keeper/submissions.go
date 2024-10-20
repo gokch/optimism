@@ -3,12 +3,13 @@ package keeper
 import (
 	"context"
 	"fmt"
-	sdk "github.com/cosmos/cosmos-sdk/types"
 	"math"
+
+	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"cosmossdk.io/store/prefix"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 func (k Keeper) HasSubmission(ctx context.Context, sk types.SubmissionKey) bool {

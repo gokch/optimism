@@ -4,9 +4,9 @@ import (
 	"context"
 
 	bbn "github.com/babylonlabs-io/babylon/types"
-	bstypes "github.com/babylonlabs-io/babylon/x/btcstaking/types"
-	etypes "github.com/babylonlabs-io/babylon/x/epoching/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	bstypes "github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	etypes "github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 type BTCStakingKeeper interface {

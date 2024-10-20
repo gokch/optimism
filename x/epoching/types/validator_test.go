@@ -3,7 +3,7 @@ package types_test
 import (
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	"github.com/stretchr/testify/require"
 )
 

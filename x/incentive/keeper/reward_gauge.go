@@ -2,10 +2,11 @@ package keeper
 
 import (
 	"context"
+
 	"cosmossdk.io/store/prefix"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
 	"github.com/cosmos/cosmos-sdk/runtime"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 )
 
 func (k Keeper) withdrawReward(ctx context.Context, sType types.StakeholderType, addr sdk.AccAddress) (sdk.Coins, error) {

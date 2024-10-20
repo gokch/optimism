@@ -3,10 +3,10 @@ package keeper
 import (
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authz "github.com/cosmos/cosmos-sdk/x/authz"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
 	"github.com/stretchr/testify/require"
 )
 

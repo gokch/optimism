@@ -7,7 +7,7 @@ import (
 
 	corestoretypes "cosmossdk.io/core/store"
 
-	txformat "github.com/babylonlabs-io/babylon/btctxformatter"
+	txformat "github.com/ethereum-optimism/optimism/x/btctxformatter"
 
 	"cosmossdk.io/log"
 	"github.com/cosmos/cosmos-sdk/codec"
@@ -16,8 +16,8 @@ import (
 	cmtprotocrypto "github.com/cometbft/cometbft/proto/tendermint/crypto"
 
 	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
-	epochingtypes "github.com/babylonlabs-io/babylon/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	epochingtypes "github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 type (

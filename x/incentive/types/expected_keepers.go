@@ -3,8 +3,8 @@ package types
 import (
 	"context"
 
-	epochingtypes "github.com/babylonlabs-io/babylon/x/epoching/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	epochingtypes "github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 type AccountKeeper interface {

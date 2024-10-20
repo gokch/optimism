@@ -9,9 +9,9 @@ import (
 
 	sdkmath "cosmossdk.io/math"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	"github.com/stretchr/testify/require"
 )
 

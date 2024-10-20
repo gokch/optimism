@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	"github.com/babylonlabs-io/babylon/testutil/helper"
-	btclightclientt "github.com/babylonlabs-io/babylon/x/btclightclient/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/helper"
+	btclightclientt "github.com/ethereum-optimism/optimism/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 	"github.com/stretchr/testify/require"
 )
 

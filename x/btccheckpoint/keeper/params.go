@@ -2,7 +2,8 @@ package keeper
 
 import (
 	"context"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 // SetParams sets the x/btccheckpoint module parameters.

@@ -8,8 +8,8 @@ import (
 
 	"cosmossdk.io/store/prefix"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 func (k Keeper) SetSig(ctx context.Context, height uint64, fpBtcPK *bbn.BIP340PubKey, sig *bbn.SchnorrEOTSSig) {

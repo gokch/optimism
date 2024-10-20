@@ -7,8 +7,8 @@ import (
 	"github.com/cometbft/cometbft/crypto/tmhash"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/babylonlabs-io/babylon/btctxformatter"
 	"github.com/babylonlabs-io/babylon/crypto/bls12381"
+	"github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 func (m BlsSig) Hash() BlsSigHash {

@@ -6,14 +6,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	"github.com/stretchr/testify/require"
 
-	keepertest "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/keeper"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/secp256k1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/keeper"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 )
 
 func setupMsgServer(t testing.TB) (types.MsgServer, *keeper.Keeper, context.Context) {

@@ -6,12 +6,12 @@ import (
 
 	sdkmath "cosmossdk.io/math"
 	asig "github.com/babylonlabs-io/babylon/crypto/schnorr-adaptor-signature"
-	btctest "github.com/babylonlabs-io/babylon/testutil/bitcoin"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
+	btctest "github.com/ethereum-optimism/optimism/x/testutil/bitcoin"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/txscript"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 	"github.com/stretchr/testify/require"
 )
 

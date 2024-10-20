@@ -8,13 +8,13 @@ import (
 	"testing"
 	"time"
 
-	dg "github.com/babylonlabs-io/babylon/testutil/datagen"
-	keepertest "github.com/babylonlabs-io/babylon/testutil/keeper"
+	dg "github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	bkeeper "github.com/babylonlabs-io/babylon/x/btccheckpoint/keeper"
-	btcctypes "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
 	"github.com/btcsuite/btcd/chaincfg"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	bkeeper "github.com/ethereum-optimism/optimism/x/btccheckpoint/keeper"
+	btcctypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 	"github.com/stretchr/testify/require"
 )
 

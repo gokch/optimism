@@ -7,10 +7,10 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	keepertest "github.com/babylonlabs-io/babylon/testutil/keeper"
-	btclctypes "github.com/babylonlabs-io/babylon/x/btclightclient/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
+	btclctypes "github.com/ethereum-optimism/optimism/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 func FuzzBTCHeightIndex(f *testing.F) {

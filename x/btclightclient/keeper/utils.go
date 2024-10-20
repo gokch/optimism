@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
 	"github.com/cosmos/cosmos-sdk/codec"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 )
 
 func headerInfoFromStoredBytes(cdc codec.BinaryCodec, bz []byte) *types.BTCHeaderInfo {

@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/babylonlabs-io/babylon/crypto/eots"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 	"github.com/stretchr/testify/require"
 )
 

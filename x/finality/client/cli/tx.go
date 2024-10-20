@@ -13,7 +13,7 @@ import (
 	"github.com/spf13/cobra"
 
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 // GetTxCmd returns the transaction commands for this module

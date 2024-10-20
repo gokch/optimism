@@ -1,10 +1,10 @@
 package keeper
 
 import (
-	epochingtypes "github.com/babylonlabs-io/babylon/x/epoching/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authz "github.com/cosmos/cosmos-sdk/x/authz"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	epochingtypes "github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 // DropValidatorMsgDecorator defines an AnteHandler decorator that rejects all messages that might change the validator set.

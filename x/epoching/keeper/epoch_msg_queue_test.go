@@ -4,9 +4,9 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testhelper "github.com/babylonlabs-io/babylon/testutil/helper"
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testhelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 

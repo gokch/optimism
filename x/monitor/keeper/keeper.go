@@ -2,16 +2,17 @@ package keeper
 
 import (
 	"context"
-	corestoretypes "cosmossdk.io/core/store"
 	"fmt"
 	"math"
 
-	ckpttypes "github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	corestoretypes "cosmossdk.io/core/store"
+
+	ckpttypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
 
 	"cosmossdk.io/log"
-	"github.com/babylonlabs-io/babylon/x/monitor/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/monitor/types"
 )
 
 type (

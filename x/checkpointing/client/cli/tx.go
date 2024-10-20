@@ -18,7 +18,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client"
 	// "github.com/cosmos/cosmos-sdk/client/flags"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 // GetTxCmd returns the transaction commands for this module

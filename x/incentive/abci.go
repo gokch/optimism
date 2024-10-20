@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/babylonlabs-io/babylon/x/incentive/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
 	abci "github.com/cometbft/cometbft/abci/types"
 	"github.com/cosmos/cosmos-sdk/telemetry"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/keeper"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 )
 
 func BeginBlocker(ctx context.Context, k keeper.Keeper) error {

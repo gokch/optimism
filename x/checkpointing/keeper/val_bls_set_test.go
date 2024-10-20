@@ -10,10 +10,10 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/babylonlabs-io/babylon/app"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testhelper "github.com/babylonlabs-io/babylon/testutil/helper"
-	checkpointingkeeper "github.com/babylonlabs-io/babylon/x/checkpointing/keeper"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	checkpointingkeeper "github.com/ethereum-optimism/optimism/x/checkpointing/keeper"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testhelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
 )
 
 func FuzzGetValidatorBlsKeySet(f *testing.F) {

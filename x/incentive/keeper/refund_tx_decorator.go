@@ -1,8 +1,8 @@
 package keeper
 
 import (
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 )
 
 var _ sdk.PostDecorator = &RefundTxDecorator{}

@@ -4,9 +4,9 @@ import (
 	"testing"
 
 	"github.com/babylonlabs-io/babylon/app"
-	"github.com/babylonlabs-io/babylon/testutil/nullify"
-	"github.com/babylonlabs-io/babylon/x/epoching"
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/nullify"
+	"github.com/ethereum-optimism/optimism/x/epoching"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
 	"github.com/stretchr/testify/require"
 )
 

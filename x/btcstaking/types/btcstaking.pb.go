@@ -7,7 +7,7 @@ import (
 	cosmossdk_io_math "cosmossdk.io/math"
 	fmt "fmt"
 	github_com_babylonlabs_io_babylon_types "github.com/babylonlabs-io/babylon/types"
-	types1 "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+	types1 "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 	_ "github.com/cosmos/cosmos-proto"
 	types "github.com/cosmos/cosmos-sdk/x/staking/types"
 	_ "github.com/cosmos/gogoproto/gogoproto"

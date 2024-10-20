@@ -12,8 +12,8 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
 	bbn "github.com/babylonlabs-io/babylon/types"
-	bstypes "github.com/babylonlabs-io/babylon/x/btcstaking/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	bstypes "github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 type msgServer struct {

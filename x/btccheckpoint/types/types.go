@@ -8,8 +8,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/babylonlabs-io/babylon/btctxformatter"
 	"github.com/babylonlabs-io/babylon/types"
+	"github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 // RawCheckpointSubmission Semantically valid checkpoint submission with:

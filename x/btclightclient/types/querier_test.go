@@ -5,10 +5,10 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 )
 
 func TestNewQueryHashesRequest(t *testing.T) {

@@ -5,9 +5,9 @@ import (
 	"fmt"
 
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )

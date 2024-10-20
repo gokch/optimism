@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"cosmossdk.io/math"
-	checkpointingtypes "github.com/babylonlabs-io/babylon/x/checkpointing/types"
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	checkpointingtypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 // ensures Keeper implements EpochingHooks interfaces

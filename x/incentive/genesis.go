@@ -2,8 +2,9 @@ package incentive
 
 import (
 	"context"
-	"github.com/babylonlabs-io/babylon/x/incentive/keeper"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
+
+	"github.com/ethereum-optimism/optimism/x/incentive/keeper"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 )
 
 // InitGenesis initializes the module's state from a provided genesis state.

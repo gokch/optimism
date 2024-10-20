@@ -24,7 +24,7 @@ import (
 	flag "github.com/spf13/pflag"
 
 	"github.com/babylonlabs-io/babylon/privval"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 // validator struct to define the fields of the validator

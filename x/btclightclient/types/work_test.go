@@ -1,11 +1,12 @@
 package types_test
 
 import (
-	sdkmath "cosmossdk.io/math"
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
 	"math/rand"
 	"testing"
+
+	sdkmath "cosmossdk.io/math"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 )
 
 func FuzzCumulativeWork(f *testing.F) {

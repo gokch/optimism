@@ -1,8 +1,8 @@
 package keeper_test
 
 import (
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	"github.com/babylonlabs-io/babylon/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	"math/rand"
 	"testing"
 )

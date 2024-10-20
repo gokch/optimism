@@ -9,8 +9,8 @@ import (
 	reflect "reflect"
 
 	types "github.com/babylonlabs-io/babylon/types"
-	types0 "github.com/babylonlabs-io/babylon/x/btcstaking/types"
-	types1 "github.com/babylonlabs-io/babylon/x/epoching/types"
+	types0 "github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	types1 "github.com/ethereum-optimism/optimism/x/epoching/types"
 	types2 "github.com/cosmos/cosmos-sdk/types"
 	gomock "github.com/golang/mock/gomock"
 )

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 
-	"github.com/babylonlabs-io/babylon/x/checkpointing/keeper"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/keeper"
 
 	"github.com/cosmos/cosmos-sdk/telemetry"
 )

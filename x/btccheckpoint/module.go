@@ -2,9 +2,10 @@ package btccheckpoint
 
 import (
 	"context"
-	"cosmossdk.io/core/appmodule"
 	"encoding/json"
 	"fmt"
+
+	"cosmossdk.io/core/appmodule"
 
 	"github.com/gorilla/mux"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
@@ -12,14 +13,14 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/client/cli"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/keeper"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/client/cli"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/keeper"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 var (

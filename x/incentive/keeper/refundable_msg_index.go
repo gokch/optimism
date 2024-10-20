@@ -3,8 +3,8 @@ package keeper
 import (
 	"context"
 
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 )
 
 // RefundTx refunds the given tx by sending the fee back to the fee payer.

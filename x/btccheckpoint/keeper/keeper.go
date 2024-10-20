@@ -2,20 +2,21 @@ package keeper
 
 import (
 	"context"
-	corestoretypes "cosmossdk.io/core/store"
-	storetypes "cosmossdk.io/store/types"
 	"encoding/hex"
 	"fmt"
-	"github.com/cosmos/cosmos-sdk/runtime"
 	"math/big"
+
+	corestoretypes "cosmossdk.io/core/store"
+	storetypes "cosmossdk.io/store/types"
+	"github.com/cosmos/cosmos-sdk/runtime"
 
 	"cosmossdk.io/log"
 	"cosmossdk.io/store/prefix"
-	txformat "github.com/babylonlabs-io/babylon/btctxformatter"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
+	txformat "github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 type (

@@ -6,9 +6,9 @@ import (
 
 	bbn "github.com/babylonlabs-io/babylon/types"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	keepertest "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 	"github.com/stretchr/testify/require"
 )
 

@@ -5,7 +5,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	epochingtypes "github.com/babylonlabs-io/babylon/x/epoching/types"
+	epochingtypes "github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 var (

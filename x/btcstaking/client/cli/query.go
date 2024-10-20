@@ -6,8 +6,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
 	"github.com/cosmos/cosmos-sdk/client"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 	"github.com/spf13/cobra"
 )
 

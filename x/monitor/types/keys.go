@@ -2,8 +2,9 @@ package types
 
 import (
 	"fmt"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
+
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 const (

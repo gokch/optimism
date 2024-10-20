@@ -8,7 +8,7 @@ import (
 
 	btcstk "github.com/babylonlabs-io/babylon/btcstaking"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 // InitGenesis initializes the keeper state from a provided initial genesis state.

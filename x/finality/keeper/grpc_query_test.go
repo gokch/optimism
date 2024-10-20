@@ -11,12 +11,12 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	epochingtypes "github.com/babylonlabs-io/babylon/x/epoching/types"
-	"github.com/babylonlabs-io/babylon/x/finality/keeper"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	epochingtypes "github.com/ethereum-optimism/optimism/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/finality/keeper"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 func FuzzBlock(f *testing.F) {

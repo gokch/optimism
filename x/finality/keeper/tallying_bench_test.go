@@ -11,11 +11,11 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	keepertest "github.com/babylonlabs-io/babylon/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	bstypes "github.com/babylonlabs-io/babylon/x/btcstaking/types"
-	"github.com/babylonlabs-io/babylon/x/finality/types"
+	bstypes "github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/finality/types"
 )
 
 func benchmarkTallyBlocks(b *testing.B, numFPs int) {

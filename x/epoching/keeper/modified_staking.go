@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
 	abci "github.com/cometbft/cometbft/abci/types"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"

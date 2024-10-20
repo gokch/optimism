@@ -1,7 +1,7 @@
 package keeper
 
 import (
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 var _ types.QueryServer = Keeper{}

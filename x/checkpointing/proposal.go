@@ -13,7 +13,7 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	ckpttypes "github.com/babylonlabs-io/babylon/x/checkpointing/types"
+	ckpttypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 const defaultInjectedTxIndex = 0

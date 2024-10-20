@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
 
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

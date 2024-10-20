@@ -2,12 +2,13 @@ package keeper
 
 import (
 	"context"
+
 	"cosmossdk.io/math"
 	"cosmossdk.io/store/prefix"
-	btcctypes "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
-	"github.com/babylonlabs-io/babylon/x/incentive/types"
 	"github.com/cosmos/cosmos-sdk/runtime"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	btcctypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
+	"github.com/ethereum-optimism/optimism/x/incentive/types"
 )
 
 // RewardBTCTimestamping distributes rewards to submitters/reporters of a checkpoint at a given epoch

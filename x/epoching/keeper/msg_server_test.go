@@ -8,8 +8,8 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/stretchr/testify/require"
 
-	testhelper "github.com/babylonlabs-io/babylon/testutil/helper"
-	"github.com/babylonlabs-io/babylon/x/epoching/types"
+	testhelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
+	"github.com/ethereum-optimism/optimism/x/epoching/types"
 )
 
 // TODO (fuzz tests): replace the following tests with fuzz ones

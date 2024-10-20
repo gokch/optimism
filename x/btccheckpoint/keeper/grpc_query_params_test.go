@@ -4,8 +4,8 @@ import (
 	"math/rand"
 	"testing"
 
-	testkeeper "github.com/babylonlabs-io/babylon/testutil/keeper"
-	"github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+	"github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
+	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
 	"github.com/stretchr/testify/require"
 )
 

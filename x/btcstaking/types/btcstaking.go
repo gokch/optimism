@@ -10,7 +10,7 @@ import (
 
 	asig "github.com/babylonlabs-io/babylon/crypto/schnorr-adaptor-signature"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	btcctypes "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
+	btcctypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 func (fp *FinalityProvider) IsSlashed() bool {

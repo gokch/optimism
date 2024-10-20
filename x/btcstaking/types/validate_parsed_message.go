@@ -5,8 +5,8 @@ import (
 
 	"github.com/babylonlabs-io/babylon/btcstaking"
 	bbn "github.com/babylonlabs-io/babylon/types"
-	btcckpttypes "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
 	"github.com/btcsuite/btcd/chaincfg"
+	btcckpttypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
 )
 
 type ParamsValidationResult struct {

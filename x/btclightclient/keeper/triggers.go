@@ -3,7 +3,7 @@ package keeper
 import (
 	"context"
 
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 )
 
 func (k Keeper) triggerHeaderInserted(ctx context.Context, headerInfo *types.BTCHeaderInfo) {

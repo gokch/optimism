@@ -6,8 +6,8 @@ import (
 	"github.com/btcsuite/btcd/btcutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	btcckpttypes "github.com/babylonlabs-io/babylon/x/btccheckpoint/types"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	btcckpttypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 // VerifyInclusionProofAndGetHeight verifies the inclusion proof of the given staking tx

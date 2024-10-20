@@ -13,14 +13,14 @@ import (
 
 	abci "github.com/cometbft/cometbft/abci/types"
 
-	"github.com/babylonlabs-io/babylon/x/checkpointing/client/cli"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/keeper"
-	"github.com/babylonlabs-io/babylon/x/checkpointing/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 	cdctypes "github.com/cosmos/cosmos-sdk/codec/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/client/cli"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/keeper"
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 var (

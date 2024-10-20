@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/babylonlabs-io/babylon/x/btclightclient/types"
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
+	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
 	"github.com/spf13/cobra"
 )
 

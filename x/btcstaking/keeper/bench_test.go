@@ -10,10 +10,10 @@ import (
 
 	"github.com/golang/mock/gomock"
 
-	"github.com/babylonlabs-io/babylon/testutil/datagen"
-	btclctypes "github.com/babylonlabs-io/babylon/x/btclightclient/types"
-	bsmodule "github.com/babylonlabs-io/babylon/x/btcstaking"
-	"github.com/babylonlabs-io/babylon/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	btclctypes "github.com/ethereum-optimism/optimism/x/btclightclient/types"
+	bsmodule "github.com/ethereum-optimism/optimism/x/btcstaking"
+	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
 )
 
 func benchBeginBlock(b *testing.B, numFPs int, numDelsUnderFP int) {
