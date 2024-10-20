@@ -4,7 +4,7 @@ import (
 	"github.com/cometbft/cometbft/crypto"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
 	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 

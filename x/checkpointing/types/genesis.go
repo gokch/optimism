@@ -12,7 +12,7 @@ import (
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
 )
 
 // DefaultGenesis returns the default Capability genesis state

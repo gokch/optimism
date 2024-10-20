@@ -8,12 +8,12 @@ import (
 
 	"cosmossdk.io/core/header"
 	appkeepers "github.com/babylonlabs-io/babylon/app/keepers"
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
 	abci "github.com/cometbft/cometbft/abci/types"
 	cmtproto "github.com/cometbft/cometbft/proto/tendermint/types"
 	"github.com/cosmos/cosmos-sdk/baseapp"
 	cosmosed "github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	protoio "github.com/cosmos/gogoproto/io"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
 	checkpointingtypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
 	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 

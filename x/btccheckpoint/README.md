@@ -24,7 +24,7 @@ The BTC Checkpoint module is responsible for receiving and managing the checkpoi
 - [EndBlocker](#endblocker)
 - [Queries](#queries)
 
-## Concepts 
+## Concepts
 Babylon's BTC Checkpoint module allows Babylon chain to periodically checkpoint its state onto the Bitcoin blockchain whilst simultaneously verifying the checkpoints. The process involves two main components:
 
 Checkpoint Submission:
@@ -49,7 +49,7 @@ Checkpoint Verification:
    For more details on submissions, see [Submissions](#submission-data).
 5. Non-finalized epochs are retrieved from state. For each of these non-finalized epochs, the status is checked of the corresponding checkpoint. The depth of the checkpoint in the Bitcoin blockchain is verified and based on the depth and the module's parameters, the checkpoint's status may be updated. If the status changed, it's updated in the state and the corresponding status is set in the checkpointing module. Following an epoch being finalized, all submissions except the best one are deleted.
 
-## States 
+## States
 
 The BTC Checkpoint module uses a combination of prefixed namespaces and individual keys within its KV store to organize different types of data. This approach allows for efficient storage and retrieval of various data elements related to checkpoints, epochs, and submissions.
 
@@ -152,7 +152,7 @@ The BTC Checkpoint module primarily handles messages from the vigilante reporter
 
 ### MsgInsertBTCSpvProof
 
-`MsgInsertBTCSpvProof` is used by vigilante reporter to insert a new checkpoint into the store, which can be seen [here](https://github.com/babylonlabs-io/vigilante/blob/24da0381465249aa7b55be682a66e32cdaddc81b/types/btccheckpoint.go#L11). 
+`MsgInsertBTCSpvProof` is used by vigilante reporter to insert a new checkpoint into the store, which can be seen [here](https://github.com/babylonlabs-io/vigilante/blob/24da0381465249aa7b55be682a66e32cdaddc81b/types/btccheckpoint.go#L11).
 
 ```protobuf
 message MsgInsertBTCSpvProof {

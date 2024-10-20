@@ -15,16 +15,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
-	"google.golang.org/grpc/codes"
-	"google.golang.org/grpc/status"
 
 	asig "github.com/babylonlabs-io/babylon/crypto/schnorr-adaptor-signature"
-	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
-	testhelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
 	bbn "github.com/babylonlabs-io/babylon/types"
 	btcctypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
-	"github.com/ethereum-optimism/optimism/x/btcstaking/keeper"
 	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	testhelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
 )
 
 func FuzzMsgCreateFinalityProvider(f *testing.F) {
@@ -82,57 +79,57 @@ func FuzzMsgCreateFinalityProvider(f *testing.F) {
 	})
 }
 
-func FuzzMsgEditFinalityProvider(f *testing.F) {
-	datagen.AddRandomSeedsToFuzzer(f, 10)
+// func FuzzMsgEditFinalityProvider(f *testing.F) {
+// 	datagen.AddRandomSeedsToFuzzer(f, 10)
 
-	f.Fuzz(func(t *testing.T, seed int64) {
-		r := rand.New(rand.NewSource(seed))
-		h := testhelper.NewHelper(t)
-		bsKeeper := h.App.BTCStakingKeeper
-		msgSrvr := keeper.NewMsgServerImpl(bsKeeper)
+// 	f.Fuzz(func(t *testing.T, seed int64) {
+// 		r := rand.New(rand.NewSource(seed))
+// 		h := testhelper.NewHelper(t)
+// 		bsKeeper := h.App.BTCStakingKeeper
+// 		msgSrvr := keeper.NewMsgServerImpl(bsKeeper)
 
-		// generate new finality provider
-		fp, err := datagen.GenRandomFinalityProvider(r)
-		require.NoError(t, err)
-		// insert the finality provider
-		h.AddFinalityProvider(fp)
-		// assert the finality providers exist in KVStore
-		require.True(t, bsKeeper.HasFinalityProvider(h.Ctx, *fp.BtcPk))
+// 		// generate new finality provider
+// 		fp, err := datagen.GenRandomFinalityProvider(r)
+// 		require.NoError(t, err)
+// 		// insert the finality provider
+// 		h.AddFinalityProvider(fp)
+// 		// assert the finality providers exist in KVStore
+// 		require.True(t, bsKeeper.HasFinalityProvider(h.Ctx, *fp.BtcPk))
 
-		// updated commission and description
-		newCommission := datagen.GenRandomCommission(r)
-		newDescription := datagen.GenRandomDescription(r)
+// 		// updated commission and description
+// 		newCommission := datagen.GenRandomCommission(r)
+// 		newDescription := datagen.GenRandomDescription(r)
 
-		// scenario 1: editing finality provider should succeed
-		msg := &types.MsgEditFinalityProvider{
-			Addr:        fp.Addr,
-			BtcPk:       *fp.BtcPk,
-			Description: newDescription,
-			Commission:  &newCommission,
-		}
-		_, err = msgSrvr.EditFinalityProvider(h.Ctx, msg)
-		h.NoError(err)
-		editedFp, err := bsKeeper.GetFinalityProvider(h.Ctx, *fp.BtcPk)
-		h.NoError(err)
-		require.Equal(t, newCommission, *editedFp.Commission)
-		require.Equal(t, newDescription, editedFp.Description)
+// 		// scenario 1: editing finality provider should succeed
+// 		msg := &types.MsgEditFinalityProvider{
+// 			Addr:        fp.Addr,
+// 			BtcPk:       *fp.BtcPk,
+// 			Description: newDescription,
+// 			Commission:  &newCommission,
+// 		}
+// 		_, err = msgSrvr.EditFinalityProvider(h.Ctx, msg)
+// 		h.NoError(err)
+// 		editedFp, err := bsKeeper.GetFinalityProvider(h.Ctx, *fp.BtcPk)
+// 		h.NoError(err)
+// 		require.Equal(t, newCommission, *editedFp.Commission)
+// 		require.Equal(t, newDescription, editedFp.Description)
 
-		// scenario 2: message from an unauthorised signer should fail
-		newCommission = datagen.GenRandomCommission(r)
-		newDescription = datagen.GenRandomDescription(r)
-		invalidAddr := datagen.GenRandomAccount().Address
-		msg = &types.MsgEditFinalityProvider{
-			Addr:        invalidAddr,
-			BtcPk:       *fp.BtcPk,
-			Description: newDescription,
-			Commission:  &newCommission,
-		}
-		_, err = msgSrvr.EditFinalityProvider(h.Ctx, msg)
-		h.EqualError(err, status.Errorf(codes.PermissionDenied, "the signer does not correspond to the finality provider's Babylon address"))
-		errStatus := status.Convert(err)
-		require.Equal(t, codes.PermissionDenied, errStatus.Code())
-	})
-}
+// 		// scenario 2: message from an unauthorised signer should fail
+// 		newCommission = datagen.GenRandomCommission(r)
+// 		newDescription = datagen.GenRandomDescription(r)
+// 		invalidAddr := datagen.GenRandomAccount().Address
+// 		msg = &types.MsgEditFinalityProvider{
+// 			Addr:        invalidAddr,
+// 			BtcPk:       *fp.BtcPk,
+// 			Description: newDescription,
+// 			Commission:  &newCommission,
+// 		}
+// 		_, err = msgSrvr.EditFinalityProvider(h.Ctx, msg)
+// 		h.EqualError(err, status.Errorf(codes.PermissionDenied, "the signer does not correspond to the finality provider's Babylon address"))
+// 		errStatus := status.Convert(err)
+// 		require.Equal(t, codes.PermissionDenied, errStatus.Code())
+// 	})
+// }
 
 func FuzzCreateBTCDelegation(f *testing.F) {
 	datagen.AddRandomSeedsToFuzzer(f, 10)

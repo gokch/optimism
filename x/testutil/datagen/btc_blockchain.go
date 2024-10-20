@@ -4,11 +4,11 @@ import (
 	"math/big"
 	"math/rand"
 
-	"github.com/babylonlabs-io/babylon/btctxformatter"
 	"github.com/btcsuite/btcd/blockchain"
 	"github.com/btcsuite/btcd/chaincfg"
 	"github.com/btcsuite/btcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
+	"github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 // GenRandomBtcdBlock generates a random BTC block, which can include Babylon txs.

@@ -20,13 +20,13 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/require"
 
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
-	"github.com/ethereum-optimism/optimism/x/testutil/helper"
-	"github.com/ethereum-optimism/optimism/x/testutil/mocks"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
 	"github.com/ethereum-optimism/optimism/x/checkpointing"
 	checkpointingtypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
 	et "github.com/ethereum-optimism/optimism/x/epoching/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	"github.com/ethereum-optimism/optimism/x/testutil/helper"
+	"github.com/ethereum-optimism/optimism/x/testutil/mocks"
 )
 
 type TestValidator struct {

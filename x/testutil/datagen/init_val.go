@@ -11,8 +11,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/go-bip39"
 
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	"github.com/babylonlabs-io/babylon/privval"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
+	"github.com/ethereum-optimism/optimism/x/privval"
 )
 
 // InitializeNodeValidatorFiles creates private validator and p2p configuration files.

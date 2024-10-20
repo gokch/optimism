@@ -17,9 +17,9 @@ import (
 	"github.com/btcsuite/btcd/wire"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	txformat "github.com/babylonlabs-io/babylon/btctxformatter"
 	bbn "github.com/babylonlabs-io/babylon/types"
 	btcctypes "github.com/ethereum-optimism/optimism/x/btccheckpoint/types"
+	txformat "github.com/ethereum-optimism/optimism/x/btctxformatter"
 )
 
 var (

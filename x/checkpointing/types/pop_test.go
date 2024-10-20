@@ -1,12 +1,13 @@
 package types_test
 
 import (
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	"github.com/babylonlabs-io/babylon/privval"
+	"testing"
+
 	"github.com/cometbft/cometbft/crypto/ed25519"
 	"github.com/cosmos/cosmos-sdk/crypto/codec"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
+	"github.com/ethereum-optimism/optimism/x/privval"
 	"github.com/stretchr/testify/require"
-	"testing"
 )
 
 func TestProofOfPossession_IsValid(t *testing.T) {

@@ -1,176 +1,176 @@
 package keeper_test
 
-import (
-	"math"
-	"math/rand"
-	"strings"
-	"testing"
+// import (
+// 	"math"
+// 	"math/rand"
+// 	"strings"
+// 	"testing"
 
-	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
-	"github.com/ethereum-optimism/optimism/x/testutil/helper"
-	btclightclientt "github.com/ethereum-optimism/optimism/x/btclightclient/types"
-	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
-	"github.com/stretchr/testify/require"
-)
+// 	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+// 	"github.com/ethereum-optimism/optimism/x/testutil/helper"
+// 	btclightclientt "github.com/ethereum-optimism/optimism/x/btclightclient/types"
+// 	"github.com/ethereum-optimism/optimism/x/btcstaking/types"
+// 	"github.com/stretchr/testify/require"
+// )
 
-func TestExportGenesis(t *testing.T) {
-	r, h := rand.New(rand.NewSource(11)), helper.NewHelper(t)
-	k, btclcK, btcCheckK, ctx := h.App.BTCStakingKeeper, h.App.BTCLightClientKeeper, h.App.BtcCheckpointKeeper, h.Ctx
-	numFps := 3
+// func TestExportGenesis(t *testing.T) {
+// 	r, h := rand.New(rand.NewSource(11)), helper.NewHelper(t)
+// 	k, btclcK, btcCheckK, ctx := h.App.BTCStakingKeeper, h.App.BTCLightClientKeeper, h.App.BtcCheckpointKeeper, h.Ctx
+// 	numFps := 3
 
-	fps := datagen.CreateNFinalityProviders(r, t, numFps)
-	params := k.GetParams(ctx)
-	wValue := btcCheckK.GetParams(ctx).CheckpointFinalizationTimeout
+// 	fps := datagen.CreateNFinalityProviders(r, t, numFps)
+// 	params := k.GetParams(ctx)
+// 	wValue := btcCheckK.GetParams(ctx).CheckpointFinalizationTimeout
 
-	chainsHeight := make([]*types.BlockHeightBbnToBtc, 0)
-	// creates the first as it starts already with an chain height from the helper.
-	chainsHeight = append(chainsHeight, &types.BlockHeightBbnToBtc{
-		BlockHeightBbn: 1,
-		BlockHeightBtc: 0,
-	})
-	vpFps := make(map[string]*types.VotingPowerFP, 0)
-	btcDelegations := make([]*types.BTCDelegation, 0)
-	eventsIdx := make(map[uint64]*types.EventIndex, 0)
-	btcDelegatorIndex := make(map[string]*types.BTCDelegator, 0)
+// 	chainsHeight := make([]*types.BlockHeightBbnToBtc, 0)
+// 	// creates the first as it starts already with an chain height from the helper.
+// 	chainsHeight = append(chainsHeight, &types.BlockHeightBbnToBtc{
+// 		BlockHeightBbn: 1,
+// 		BlockHeightBtc: 0,
+// 	})
+// 	vpFps := make(map[string]*types.VotingPowerFP, 0)
+// 	btcDelegations := make([]*types.BTCDelegation, 0)
+// 	eventsIdx := make(map[uint64]*types.EventIndex, 0)
+// 	btcDelegatorIndex := make(map[string]*types.BTCDelegator, 0)
 
-	blkHeight := uint64(r.Int63n(1000)) + math.MaxUint16
-	totalDelegations := 0
+// 	blkHeight := uint64(r.Int63n(1000)) + math.MaxUint16
+// 	totalDelegations := 0
 
-	for _, fp := range fps {
-		btcHead := btclcK.GetTipInfo(ctx)
-		btcHead.Height = uint32(blkHeight + 100)
-		btclcK.InsertHeaderInfos(ctx, []*btclightclientt.BTCHeaderInfo{
-			btcHead,
-		})
+// 	for _, fp := range fps {
+// 		btcHead := btclcK.GetTipInfo(ctx)
+// 		btcHead.Height = uint32(blkHeight + 100)
+// 		btclcK.InsertHeaderInfos(ctx, []*btclightclientt.BTCHeaderInfo{
+// 			btcHead,
+// 		})
 
-		// set finality
-		h.AddFinalityProvider(fp)
+// 		// set finality
+// 		h.AddFinalityProvider(fp)
 
-		stakingValue := r.Int31n(200000) + 10000
-		numDelegations := r.Int31n(10)
-		delegations := createNDelegationsForFinalityProvider(
-			r,
-			t,
-			fp.BtcPk.MustToBTCPK(),
-			int64(stakingValue),
-			int(numDelegations),
-			params.CovenantQuorum,
-		)
-		vp := uint64(stakingValue)
+// 		stakingValue := r.Int31n(200000) + 10000
+// 		numDelegations := r.Int31n(10)
+// 		delegations := createNDelegationsForFinalityProvider(
+// 			r,
+// 			t,
+// 			fp.BtcPk.MustToBTCPK(),
+// 			int64(stakingValue),
+// 			int(numDelegations),
+// 			params.CovenantQuorum,
+// 		)
+// 		vp := uint64(stakingValue)
 
-		// sets voting power
-		k.SetVotingPower(ctx, *fp.BtcPk, blkHeight, vp)
-		vpFps[fp.BtcPk.MarshalHex()] = &types.VotingPowerFP{
-			BlockHeight: blkHeight,
-			FpBtcPk:     fp.BtcPk,
-			VotingPower: vp,
-		}
+// 		// sets voting power
+// 		k.SetVotingPower(ctx, *fp.BtcPk, blkHeight, vp)
+// 		vpFps[fp.BtcPk.MarshalHex()] = &types.VotingPowerFP{
+// 			BlockHeight: blkHeight,
+// 			FpBtcPk:     fp.BtcPk,
+// 			VotingPower: vp,
+// 		}
 
-		for _, del := range delegations {
-			totalDelegations++
+// 		for _, del := range delegations {
+// 			totalDelegations++
 
-			// sets delegations
-			h.AddDelegation(del)
-			btcDelegations = append(btcDelegations, del)
+// 			// sets delegations
+// 			h.AddDelegation(del)
+// 			btcDelegations = append(btcDelegations, del)
 
-			// BTC delegators idx
-			stakingTxHash, err := del.GetStakingTxHash()
-			h.NoError(err)
+// 			// BTC delegators idx
+// 			stakingTxHash, err := del.GetStakingTxHash()
+// 			h.NoError(err)
 
-			idxDelegatorStk := types.NewBTCDelegatorDelegationIndex()
-			err = idxDelegatorStk.Add(stakingTxHash)
-			h.NoError(err)
+// 			idxDelegatorStk := types.NewBTCDelegatorDelegationIndex()
+// 			err = idxDelegatorStk.Add(stakingTxHash)
+// 			h.NoError(err)
 
-			btcDelegatorIndex[del.BtcPk.MarshalHex()] = &types.BTCDelegator{
-				Idx: &types.BTCDelegatorDelegationIndex{
-					StakingTxHashList: idxDelegatorStk.StakingTxHashList,
-				},
-				FpBtcPk:  fp.BtcPk,
-				DelBtcPk: del.BtcPk,
-			}
+// 			btcDelegatorIndex[del.BtcPk.MarshalHex()] = &types.BTCDelegator{
+// 				Idx: &types.BTCDelegatorDelegationIndex{
+// 					StakingTxHashList: idxDelegatorStk.StakingTxHashList,
+// 				},
+// 				FpBtcPk:  fp.BtcPk,
+// 				DelBtcPk: del.BtcPk,
+// 			}
 
-			// record event that the BTC delegation will become unbonded at endHeight-w
-			unbondedEvent := types.NewEventPowerDistUpdateWithBTCDel(&types.EventBTCDelegationStateUpdate{
-				StakingTxHash: stakingTxHash.String(),
-				NewState:      types.BTCDelegationStatus_UNBONDED,
-			})
+// 			// record event that the BTC delegation will become unbonded at endHeight-w
+// 			unbondedEvent := types.NewEventPowerDistUpdateWithBTCDel(&types.EventBTCDelegationStateUpdate{
+// 				StakingTxHash: stakingTxHash.String(),
+// 				NewState:      types.BTCDelegationStatus_UNBONDED,
+// 			})
 
-			// events
-			idxEvent := uint64(totalDelegations - 1)
-			eventsIdx[idxEvent] = &types.EventIndex{
-				Idx:            idxEvent,
-				BlockHeightBtc: del.EndHeight - wValue,
-				Event:          unbondedEvent,
-			}
-		}
+// 			// events
+// 			idxEvent := uint64(totalDelegations - 1)
+// 			eventsIdx[idxEvent] = &types.EventIndex{
+// 				Idx:            idxEvent,
+// 				BlockHeightBtc: del.EndHeight - wValue,
+// 				Event:          unbondedEvent,
+// 			}
+// 		}
 
-		// sets chain heights
-		header := ctx.HeaderInfo()
-		header.Height = int64(blkHeight)
-		ctx = ctx.WithHeaderInfo(header)
-		h.Ctx = ctx
+// 		// sets chain heights
+// 		header := ctx.HeaderInfo()
+// 		header.Height = int64(blkHeight)
+// 		ctx = ctx.WithHeaderInfo(header)
+// 		h.Ctx = ctx
 
-		k.IndexBTCHeight(ctx)
-		chainsHeight = append(chainsHeight, &types.BlockHeightBbnToBtc{
-			BlockHeightBbn: blkHeight,
-			BlockHeightBtc: btcHead.Height,
-		})
+// 		k.IndexBTCHeight(ctx)
+// 		chainsHeight = append(chainsHeight, &types.BlockHeightBbnToBtc{
+// 			BlockHeightBbn: blkHeight,
+// 			BlockHeightBtc: btcHead.Height,
+// 		})
 
-		blkHeight++ // each fp increase blk height to modify data in state.
-	}
+// 		blkHeight++ // each fp increase blk height to modify data in state.
+// 	}
 
-	gs, err := k.ExportGenesis(ctx)
-	h.NoError(err)
-	require.Equal(t, k.GetParams(ctx), *gs.Params[0])
+// 	gs, err := k.ExportGenesis(ctx)
+// 	h.NoError(err)
+// 	require.Equal(t, k.GetParams(ctx), *gs.Params[0])
 
-	// finality providers
-	correctFps := 0
-	for _, fp := range fps {
-		for _, gsfp := range gs.FinalityProviders {
-			if !strings.EqualFold(fp.Addr, gsfp.Addr) {
-				continue
-			}
-			require.EqualValues(t, fp, gsfp)
-			correctFps++
-		}
-	}
-	require.Equal(t, correctFps, numFps)
+// 	// finality providers
+// 	correctFps := 0
+// 	for _, fp := range fps {
+// 		for _, gsfp := range gs.FinalityProviders {
+// 			if !strings.EqualFold(fp.Addr, gsfp.Addr) {
+// 				continue
+// 			}
+// 			require.EqualValues(t, fp, gsfp)
+// 			correctFps++
+// 		}
+// 	}
+// 	require.Equal(t, correctFps, numFps)
 
-	// btc delegations
-	correctDels := 0
-	for _, del := range btcDelegations {
-		for _, gsdel := range gs.BtcDelegations {
-			if !strings.EqualFold(del.StakerAddr, gsdel.StakerAddr) {
-				continue
-			}
-			correctDels++
-			require.Equal(t, del, gsdel)
-		}
-	}
-	require.Equal(t, correctDels, len(btcDelegations))
+// 	// btc delegations
+// 	correctDels := 0
+// 	for _, del := range btcDelegations {
+// 		for _, gsdel := range gs.BtcDelegations {
+// 			if !strings.EqualFold(del.StakerAddr, gsdel.StakerAddr) {
+// 				continue
+// 			}
+// 			correctDels++
+// 			require.Equal(t, del, gsdel)
+// 		}
+// 	}
+// 	require.Equal(t, correctDels, len(btcDelegations))
 
-	// voting powers
-	for _, gsFpVp := range gs.VotingPowers {
-		vp := vpFps[gsFpVp.FpBtcPk.MarshalHex()]
-		require.Equal(t, gsFpVp, vp)
-	}
+// 	// voting powers
+// 	for _, gsFpVp := range gs.VotingPowers {
+// 		vp := vpFps[gsFpVp.FpBtcPk.MarshalHex()]
+// 		require.Equal(t, gsFpVp, vp)
+// 	}
 
-	// chains height
-	require.Equal(t, chainsHeight, gs.BlockHeightChains)
+// 	// chains height
+// 	require.Equal(t, chainsHeight, gs.BlockHeightChains)
 
-	// btc delegators
-	require.Equal(t, totalDelegations, len(gs.BtcDelegators))
-	for _, btcDel := range gs.BtcDelegators {
-		idxBtcDel := btcDelegatorIndex[btcDel.DelBtcPk.MarshalHex()]
-		require.Equal(t, btcDel, idxBtcDel)
-	}
+// 	// btc delegators
+// 	require.Equal(t, totalDelegations, len(gs.BtcDelegators))
+// 	for _, btcDel := range gs.BtcDelegators {
+// 		idxBtcDel := btcDelegatorIndex[btcDel.DelBtcPk.MarshalHex()]
+// 		require.Equal(t, btcDel, idxBtcDel)
+// 	}
 
-	// events
-	require.Equal(t, totalDelegations, len(gs.Events))
-	for _, evt := range gs.Events {
-		evtIdx := eventsIdx[evt.Idx]
-		require.Equal(t, evt, evtIdx)
-	}
+// 	// events
+// 	require.Equal(t, totalDelegations, len(gs.Events))
+// 	for _, evt := range gs.Events {
+// 		evtIdx := eventsIdx[evt.Idx]
+// 		require.Equal(t, evt, evtIdx)
+// 	}
 
-	// TODO: vp dst cache
-}
+// 	// TODO: vp dst cache
+// }

@@ -3,8 +3,6 @@ package datagen
 import (
 	"github.com/babylonlabs-io/babylon/app"
 	appkeepers "github.com/babylonlabs-io/babylon/app/keepers"
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	"github.com/babylonlabs-io/babylon/privval"
 	cmtcrypto "github.com/cometbft/cometbft/crypto"
 	cmted25519 "github.com/cometbft/cometbft/crypto/ed25519"
 	"github.com/cosmos/cosmos-sdk/crypto/codec"
@@ -12,7 +10,9 @@ import (
 	cosmosed "github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	"github.com/cosmos/cosmos-sdk/crypto/keys/secp256k1"
 	sdk "github.com/cosmos/cosmos-sdk/types"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
 	checkpointingtypes "github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/privval"
 )
 
 type GenesisValidators struct {

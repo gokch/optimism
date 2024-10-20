@@ -7,9 +7,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
 	testkeeper "github.com/ethereum-optimism/optimism/x/testutil/keeper"
-	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
 )
 
 // a single validator

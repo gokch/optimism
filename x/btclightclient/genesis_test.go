@@ -5,14 +5,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
-	thelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
-	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
-	"github.com/ethereum-optimism/optimism/x/testutil/nullify"
 	"github.com/cometbft/cometbft/crypto/secp256k1"
 	"github.com/ethereum-optimism/optimism/x/btclightclient"
 	"github.com/ethereum-optimism/optimism/x/btclightclient/keeper"
 	"github.com/ethereum-optimism/optimism/x/btclightclient/types"
+	"github.com/ethereum-optimism/optimism/x/testutil/datagen"
+	thelper "github.com/ethereum-optimism/optimism/x/testutil/helper"
+	keepertest "github.com/ethereum-optimism/optimism/x/testutil/keeper"
+	"github.com/ethereum-optimism/optimism/x/testutil/nullify"
 	"github.com/stretchr/testify/require"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

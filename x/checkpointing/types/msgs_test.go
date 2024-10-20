@@ -5,15 +5,15 @@ import (
 
 	sdkmath "cosmossdk.io/math"
 	appparams "github.com/babylonlabs-io/babylon/app/params"
-	"github.com/babylonlabs-io/babylon/crypto/bls12381"
-	"github.com/babylonlabs-io/babylon/privval"
 	"github.com/cometbft/cometbft/crypto/ed25519"
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 	cryptocodec "github.com/cosmos/cosmos-sdk/crypto/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
+	"github.com/ethereum-optimism/optimism/x/bls12381"
 	"github.com/ethereum-optimism/optimism/x/checkpointing/types"
+	"github.com/ethereum-optimism/optimism/x/privval"
 	"github.com/stretchr/testify/require"
 )
 

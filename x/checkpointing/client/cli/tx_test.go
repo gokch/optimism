@@ -28,7 +28,7 @@ import (
 
 	"github.com/babylonlabs-io/babylon/app"
 	"github.com/babylonlabs-io/babylon/app/params"
-	"github.com/babylonlabs-io/babylon/privval"
+	"github.com/ethereum-optimism/optimism/x/privval"
 	testutilcli "github.com/ethereum-optimism/optimism/x/testutil/cli"
 	checkpointcli "github.com/ethereum-optimism/optimism/x/checkpointing/client/cli"
 )
